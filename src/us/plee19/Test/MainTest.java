@@ -25,6 +25,7 @@ public class MainTest extends TestCase {
         badFile.fileClose();
     }
 
+    //NullPointerException issues for these tests?
     @Test
     public void testGetCountryListCities() {
         ArrayList<String> countriesList;
