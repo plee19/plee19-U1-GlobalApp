@@ -15,8 +15,8 @@ public class MainTest extends TestCase {
 
     @Before
     public void SetUp() {
-        realSortedCities = new FileInput("realSortedCities.csv");
-        realSortedStuff = new FileInput("realSortedStuff.csv");
+        FileInput realSortedCities;
+        FileInput realSortedStuff;
     }
 
     @After
@@ -25,7 +25,6 @@ public class MainTest extends TestCase {
         badFile.fileClose();
     }
 
-    //NullPointerException issues for these tests?
     @Test
     public void testGetCountryListCities() {
         realSortedCities = new FileInput("realSortedCities.csv");
