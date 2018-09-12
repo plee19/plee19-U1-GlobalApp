@@ -28,6 +28,7 @@ public class MainTest extends TestCase {
     //NullPointerException issues for these tests?
     @Test
     public void testGetCountryListCities() {
+        realSortedCities = new FileInput("realSortedCities.csv");
         ArrayList<String> countriesList;
         countriesList = getCountryListCities(realSortedCities);
         assert(countriesList.size() == 3);
@@ -35,15 +36,9 @@ public class MainTest extends TestCase {
 
     @Test
     public void testEliminateDuplicates() {
+        realSortedStuff = new FileInput("realSortedStuff.csv");
         ArrayList<String> stuffList;
         stuffList = eliminateDuplicates(realSortedStuff);
         assert(stuffList.size() == 2);
     }
-
-    @Test (expected = NullPointerException.class)
-    public void testEmptyFile() {
-        badFile = new FileInput("badFile.csv");
-        System.out.println(getCountryListCities(badFile));
-    }
-
 }

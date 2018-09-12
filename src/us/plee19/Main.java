@@ -13,9 +13,6 @@ public class Main {
     private final static FileInput stuffFile = new FileInput("stuff.csv");
 
     public static void main(String[] args) {
-        String line;
-        String[] fields;
-        String[] strings = new String[2];
         ArrayList<String> placesList;
         ArrayList<String> stuffList;
 
