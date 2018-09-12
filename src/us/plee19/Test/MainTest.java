@@ -22,7 +22,7 @@ public class MainTest extends TestCase {
     @After
     public void TakeDown() {
         realSortedStuff.fileClose();
-        badFile.fileClose();
+        realSortedCities.fileClose();
     }
 
     @Test
